@@ -1,0 +1,770 @@
+html {
+  font-size: 16px;
+}
+.overflow {
+  overflow: hidden;
+}
+/* NAVIGATION */
+
+.navbar-brand > img {
+  width: 11rem;
+  height: 7rem;
+}
+.nav-item {
+  font-size: 1.5rem;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.nav-item > .nav-link {
+  color: #48bcd5;
+}
+.burger.navbar-toggler {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+
+.navbar.navbar-expand-lg.border-bottom.border-info {
+  padding: 0.5rem 3rem;
+  margin-top: 0.5rem;
+}
+.burger.navbar-toggler input {
+  display: none;
+}
+
+.burger.navbar-toggler span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  background-color: #48bcd5;
+}
+
+.burger.navbar-toggler span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger.navbar-toggler span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger.navbar-toggler span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger.navbar-toggler input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger.navbar-toggler input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger.navbar-toggler input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+/* NAVIGATION */
+
+/* HERO SECTION*/
+
+.hero {
+  height: 85vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(to bottom, white, #8ee6f3);
+  background-image: url(images/people4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grupbuton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  padding-left: 5rem;
+}
+.spantext {
+  color: #317c8d;
+}
+.herotext > h1 {
+  color: #48bcd5;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.7rem;
+}
+.herotext > p {
+  color: #317c8d;
+  font-size: 1.5rem;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.button:hover::before {
+  width: 250%;
+}
+
+@media (max-width: 873px) {
+  .herotext > h1 {
+    font-size: 2.3rem;
+  }
+  .herotext > p {
+    font-size: 1.2rem;
+  }
+  .button {
+    font-size: 13px;
+  }
+  .navbar-brand > img {
+    width: 9rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 800px) {
+  .grupbuton {
+    width: 70%;
+  }
+  .herotext > h1 {
+    font-size: 1.8rem;
+  }
+  .herotext > p {
+    font-size: 1rem;
+  }
+  .navbar-brand > img {
+    width: 6rem;
+    height: 4rem;
+  }
+  .burger.navbar-toggler {
+    width: 40px;
+    height: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .grupbuton {
+    width: 90%;
+    padding-left: 1rem;
+  }
+}
+
+/* HERO SECTION*/
+
+/* SERVICES SECTION*/
+
+.information {
+  height: 100%;
+  padding-top: 8rem;
+  margin-bottom: 7rem;
+}
+.places {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+.locations,
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.locations > h1,
+.time > h3,
+.places > p {
+  color: #317c8d;
+}
+.locations > h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.time > h3 {
+  font-size: 2rem;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.places > p {
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.butontelefon {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.butontelefon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #317c8d 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.butontelefon::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #317c8d 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.butontelefon:hover::after {
+  filter: blur(30px);
+}
+
+.butontelefon:hover::before {
+  transform: rotate(-180deg);
+}
+
+.butontelefon:active::before {
+  scale: 0.7;
+}
+.butontelefon > a {
+  color: #317c8d;
+  text-decoration: none;
+  font-family: "Oswald", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.locations {
+  gap: 2rem;
+}
+.time {
+  gap: 0.2rem;
+}
+.time > i:not(:first-child) {
+  padding-left: 7rem;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+.aspirator,
+.geam,
+.canapea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.geam > img,
+.aspirator > img,
+.canapea > img {
+  width: 8rem;
+  height: 8rem;
+}
+.geam > p,
+.aspirator > p,
+.canapea > p {
+  width: 60%;
+  color: #317c8d;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+.geam > h3,
+.aspirator > h3,
+.canapea > h3 {
+  color: #317c8d;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (max-width: 1270px) {
+  .locations > h1 {
+    font-size: 2rem;
+  }
+  .places > p {
+    font-size: 1.5rem;
+  }
+  .time > h3 {
+    font-size: 1.2rem;
+  }
+  .geam > img,
+  .aspirator > img,
+  .canapea > img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .geam > p,
+  .aspirator > p,
+  .canapea > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .locations > h1 {
+    font-size: 1.7rem;
+  }
+  .places > p {
+    font-size: 1.2rem;
+  }
+  .time > h3 {
+    font-size: 1.2rem;
+  }
+  .geam > img,
+  .aspirator > img,
+  .canapea > img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .geam > p,
+  .aspirator > p,
+  .canapea > p {
+    font-size: 1rem;
+    width: 90%;
+  }
+}
+@media (max-width: 841px) {
+  .types h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 765px) {
+  .locations {
+    gap: 1rem;
+  }
+  .locations > h1 {
+    font-size: 1.7rem;
+  }
+  .places > p {
+    font-size: 1.2rem;
+  }
+  .time > h3 {
+    font-size: 1.2rem;
+  }
+  .geam > img,
+  .aspirator > img,
+  .canapea > img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .geam > p,
+  .aspirator > p,
+  .canapea > p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 661px) {
+  .locations > h1 {
+    font-size: 1.3rem;
+  }
+  .places > p {
+    font-size: 1rem;
+  }
+  .time > h3 {
+    font-size: 1.2rem;
+  }
+  .geam > img,
+  .aspirator > img,
+  .canapea > img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .geam > p,
+  .aspirator > p,
+  .canapea > p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 620px) {
+  .types {
+    flex-wrap: wrap;
+  }
+  .time > i:not(:first-child) {
+    padding-left: 3rem;
+  }
+  .places > p {
+    width: 80%;
+  }
+  .time > h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 548px) {
+  .locations > h1 {
+    font-size: 1rem;
+  }
+  .locations {
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .time > i:not(:first-child) {
+    padding-left: 1.7rem;
+  }
+}
+@media (max-width: 430px) {
+  .time > i:not(:first-child) {
+    padding-left: 0.5rem;
+  }
+  .locations > h1 {
+    font-size: 1rem;
+  }
+  .locations {
+    gap: 0.3rem;
+  }
+}
+
+/* SERVICES SECTION*/
+
+/* PRODUCTS SECTION*/
+
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+.productstext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  gap: 2rem;
+}
+.productstext > h1 {
+  color: #48bcd5;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.productstext > p {
+  color: #317c8d;
+  font-size: 1.5rem;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.productsspan {
+  color: #317c8d;
+}
+.productsimage > img {
+  width: 30rem;
+  height: 20rem;
+}
+.productsexamples {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #317c8d;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+.productsexamples > img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.productsexamples > p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .productsimage > img {
+    width: 22rem;
+    height: 17rem;
+  }
+  .productstext > h1 {
+    font-size: 1.7rem;
+  }
+  .productstext > p {
+    font-size: 1.2rem;
+  }
+  .productsexamples {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .products {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 13rem;
+  }
+  .productstext {
+    width: 80%;
+  }
+  .information {
+    margin-bottom: 9rem;
+  }
+}
+/* PRODUCTS SECTION*/
+
+/* CONTACT SECTION*/
+
+.contact {
+  background-color: #329bb3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact span {
+  color: #1d6777;
+}
+.contact > h1 {
+  color: #65c3d8;
+  position: absolute;
+  top: 10%;
+  left: 13%;
+  font-size: 3.5rem;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  width: 50%;
+}
+.contact > img {
+  width: 11rem;
+  height: 7rem;
+  position: absolute;
+  top: 10%;
+  right: 13%;
+}
+.grupcontact {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 10rem;
+  padding-top: 17rem;
+}
+.grupcontact h4 {
+  color: #fff;
+  padding-bottom: 0.5rem;
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.datedecontact > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.locatiideactivitate > p {
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+.grupcontact h4:nth-child(3) {
+  padding-top: 1rem;
+}
+
+.iconitesocial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.copyright > p {
+  margin-bottom: 0;
+  padding-left: 0.3rem;
+}
+.copyright,
+.developed {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.developed > img {
+  width: 160px;
+  height: 100px;
+}
+
+@media (max-width: 1150px) {
+  .contact > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact > h1 {
+    font-size: 2.5rem;
+  }
+  .grupcontact {
+    gap: 5rem;
+  }
+}
+@media (max-width: 815px) {
+  .contact > h1 {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    width: 70%;
+  }
+  .contact > img {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .grupcontact {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 740px) {
+  .grupcontact {
+    gap: 3rem;
+  }
+}
+@media (max-width: 650px) {
+  .grupcontact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact > img {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .developed > img {
+    width: 120px;
+    height: 80px;
+  }
+}
+@media (max-width: 586px) {
+  .contact > h1 {
+    width: 90%;
+  }
+}
+@media (max-width: 460px) {
+  .contact > img {
+    top: 22%;
+  }
+}
+
+/* CONTACT SECTION*/
